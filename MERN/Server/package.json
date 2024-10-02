@@ -2,9 +2,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.0",
-    "mongoose": "^8.7.0",
-    "nodemon": "^3.1.7",
-    "type": "module"
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.12.3",
+    "nodemon": "^3.1.7"
   },
   "scripts": {
     "start": "nodemon index.js"

@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1/BOOKSTORE");
 
+mongoose.connect("mongodb://127.0.0.1/BOOKSTORE");
 const db = mongoose.connection;
 
-db.on("connected", (err) => {
-  if (err) return console.error(err);
-  console.log("Connected to MongoDB");
+db.on("connected", () => {
+  console.log("database connected");
 });
 
 module.exports = db;

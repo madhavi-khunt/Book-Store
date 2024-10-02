@@ -1,10 +1,15 @@
 const express = require("express");
+// import express from "express";
 const PORT = 5000;
-const app = express();
+
 const db = require("./config/config");
-const bschema = require("./model/schema");
+const bookmodel = require("./model/bookmodel");
 
-app.use(express.urlencoded());
+const app = express();
 
-app.get("/", (req, res) => res.send("Hello World!"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use("/", require("./routes/route"));
+
 app.listen(PORT, () => console.log(`app listening on port ${PORT}!`));
