@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { AiOutlineEdit } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineAddBox, MdOutlineDelete } from "react-icons/md";
-import Spinner from "../components/Spinner";
 
 function Home() {
   const [books, setBooks] = useState(false);
@@ -29,12 +28,12 @@ function Home() {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl my-8">Books List</h1>
         <Link to="/books/create">
-        <MdOutlineAddBox className="text-sky-800 text-4xl"></MdOutlineAddBox>
+          <MdOutlineAddBox className="text-sky-800 text-4xl"></MdOutlineAddBox>
         </Link>
       </div>
-      {loading?(
-        <Spinner/>
-      ) :(
+      {loading ? (
+        <Spinner />
+      ) : (
         <table className="w-full  border-separate  border-spacing-2">
           <thead>
             <tr>
@@ -44,8 +43,7 @@ function Home() {
             </tr>
           </thead>
         </table>
-      )
-    }
+      )}
     </div>
   );
 }
